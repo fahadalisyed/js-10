@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+<div class="container-1">
+
+    <form id="signupForm" onsubmit="submitForm(event)">
+        <div class="form-group">
+       <br> <label for="firstName">First Name:</label><br><br>
+        <input type="text" id="firstName" name="firstName"placeholder="Enter Name" required>
+    </div>
+    <div class="form-group">
+       <br> <label for="lastName">Last Name:</label><br><br>
+        <input type="text" id="lastName" name="lastName"placeholder="Enter Last Name" required>
+</div>
+<div class=" form-group">
+       <br> <label for="email">Email:</label><br><br>
+        <input type="email" id="email" name="email" placeholder="Enter Email">
+    </div>
+        <div class="form-group">
+       <br> <label for="password">Password:</label><br><br>
+        <input type="password" id="password" name="password" placeholder="Enter Password">
+    </div>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</div>
+
+    <div id="userData">
+        <h2>User Data</h2>
+        <p><strong>First Name:</strong> <span id="displayFirstName"></span></p>
+        <p><strong>Last Name:</strong> <span id="displayLastName"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    </div>
+
+
+    <div class="item-container" id="item-container">
+        <h2>Item Title</h2>
+        <p class="initial-description">
+            
+            This is a brief description of the item. Only a limited amount of information is shown initially.
+        </p>
+        <p class="full-description" id="full-description">
+            
+            This is the full description of the item. It provides all the details about the item that the user might be interested in.
+        </p>
+        <button class="bt" onclick="toggleDescription()">Read more</button>
+    </div>
+
+
+
+    <form id="studentForm">
+        <label for="name">Name:</label><br><br>
+        <input type="text" id="name" name="name" required>
+
+       <br> <label for="age">Age:</label><br><br>
+        <input type="number" id="age" name="age" required>
+
+        <br><label for="grade">Grade:</label><br><br>
+        <input type="text" id="grade" name="grade" required>
+<br>
+        <button class="bts" type="button" onclick="addStudent()">Add Student</button>
+    </form>
+
+    <table id="studentTable">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <div class="hidden-form" id="editForm">
+        <h2>Edit Student</h2>
+        <label for="editName">Name:</label>
+        <input type="text" id="editName" name="editName" required>
+
+        <label for="editAge">Age:</label>
+        <input type="number" id="editAge" name="editAge" required>
+
+        <label for="editGrade">Grade:</label>
+        <input type="text" id="editGrade" name="editGrade" required>
+
+        <button class="btd" type="button" onclick="cancelEdit()">Cancel</button>
+        <button class="btd" type="button" onclick="updateStudent()">Update</button>
+    </div>
+
+
+    
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
